@@ -1,0 +1,29 @@
+=== KubeGuardian Milestone 1 State ===
+Date: Wed Jun 17 11:57:43 PM IST 2026
+Minikube Status:
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+Python Virtual Environment Dependencies:
+certifi==2026.6.17
+cffi==2.0.0
+charset-normalizer==3.4.7
+cryptography==49.0.0
+google-auth==2.55.0
+idna==3.18
+kubernetes==30.1.0
+oauthlib==3.3.1
+pyasn1==0.6.3
+pyasn1_modules==0.4.2
+pycparser==3.0
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+requests==2.34.2
+requests-oauthlib==2.0.0
+six==1.17.0
+urllib3==2.7.0
+websocket-client==1.9.0
