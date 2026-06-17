@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crash-test-dummy
+  namespace: default
+spec:
+  containers:
+  - name: broken-container
+    image: nginx:this-tag-does-not-exist
