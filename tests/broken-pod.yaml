@@ -1,9 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: crash-test-dummy
+  name: test-fault-pod
   namespace: default
+  labels:
+    tier: testing
 spec:
   containers:
-  - name: broken-container
-    image: nginx:this-tag-does-not-exist
+  - name: broken-app
+    image: nginx:this-tag-does-not-exist-on-registry
+    imagePullPolicy: Always

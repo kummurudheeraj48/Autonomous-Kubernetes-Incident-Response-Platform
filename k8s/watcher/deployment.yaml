@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubeguardian-watcher
+  namespace: default
+  labels:
+    app: kubeguardian-watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubeguardian-watcher
+  template:
+    metadata:
+      labels:
+        app: kubeguardian-watcher
+    spec:
+      serviceAccountName: kubeguardian-sa
+      containers:
+      - name: watcher
+        image: kubeguardian-watcher:v1.2.0
+        imagePullPolicy: Never
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
